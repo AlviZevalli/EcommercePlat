@@ -33,7 +33,7 @@
               <a href="#" class="social-icon">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="/Home/Home.html" class="social-icon">
+              <a href="/EcommercePlat/Home/" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
             </div>

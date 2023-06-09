@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +26,7 @@
         <h1 class="Logo">
           <a href="/">LokaArt</a>
         </h1>
-        <a href="/SignUp/SignUp.html" class="btnSignup">Sign Up</a>
+        <a href="/EcommercePlat/SignUp/SignUp.php" class="btnSignup">Sign Up</a>
       </nav>
       <div class="headertitle fade">
         <div class="animated-text">

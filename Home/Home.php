@@ -15,7 +15,7 @@
         <ul class="menu">
             <li><a href="" class="active"></a></li>
             <li><a href="" >New Arrivals</a></li>
-            <li><a href="" >Cek Ongkir</a></li>
+            <li><a href="/EcommercePlat/CekOngkir/Ongkir.php" >Cek Ongkir</a></li>
             <li><a href="" >Account</a></li>
             <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
