@@ -1,0 +1,182 @@
+*{
+    margin : 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100%;
+}
+
+.menu-btn{
+    color: brown;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar{
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .logo h1{
+    color: brown;
+    border-bottom: 4px solid red;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu  li a{
+    display: block;
+    margin-left: 20px;
+    color: gray;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar.menu li .active{
+    border-bottom: 4px solid brown;
+}
+
+.navbar.menu li a i{
+    color: brown;
+}
+
+.navbar .menu li a:hover{
+    border-bottom: 4px solid brown;
+}
+
+.content {
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: gray;
+    height: 100vh;
+}
+
+.content .text-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.content .text-container .text {
+    margin-right: 20px;
+}
+
+.content .image-container {
+    float: right;
+    margin-left: 20px;
+}
+
+.content .image-container img {
+    max-width: 100%;
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+.content p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.content button {
+    margin-top: 30px;
+    padding: 15px 40px;
+    border: none;
+    background: green;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pheading{
+    text-align: center;
+    margin: 50px 0;
+    color: gray;
+}
+
+
+.sec{
+    padding: 10px 5%;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.products .card{
+    width: 310px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.products .card img{
+    height: 250px;
+    width: 100%;
+}
+
+.products .card .desc{
+    padding: 5px 20 px;
+    opacity: 0.8;
+}
+
+.products .card .judul{
+    font-weight: 900;
+    font-size: 20px;
+    color: gray;
+    padding: 0 20px;
+}
+
+.products .card .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.products .card .box .harga{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.products .card .box .btn{
+    font: 13px;
+    color: green;
+    padding: 10px 18px;
+    font-weight: 900;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+
+.products .card .box .btn:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
+
