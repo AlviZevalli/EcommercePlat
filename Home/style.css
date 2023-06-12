@@ -1,21 +1,21 @@
-*{
-    margin : 0;
+* {
+    margin: 0;
     padding: 0;
     font-family: sans-serif;
 }
 
-body{
+body {
     height: 100%;
 }
 
-.menu-btn{
+.menu-btn {
     color: brown;
     font-size: 23px;
     cursor: pointer;
     display: none;
 }
 
-.navbar{
+.navbar {
     padding: 20px 5%;
     display: flex;
     justify-content: space-between;
@@ -27,17 +27,17 @@ body{
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
 }
 
-.navbar .logo h1{
+.navbar .logo h1 {
     color: brown;
     border-bottom: 4px solid red;
 }
 
-.navbar .menu li{
+.navbar .menu li {
     list-style: none;
     display: inline-block;
 }
 
-.navbar .menu  li a{
+.navbar .menu li a {
     display: block;
     margin-left: 20px;
     color: gray;
@@ -47,15 +47,15 @@ body{
     font-weight: bold;
 }
 
-.navbar.menu li .active{
+.navbar .menu li .active {
     border-bottom: 4px solid brown;
 }
 
-.navbar.menu li a i{
+.navbar .menu li a i {
     color: brown;
 }
 
-.navbar .menu li a:hover{
+.navbar .menu li a:hover {
     border-bottom: 4px solid brown;
 }
 
@@ -108,25 +108,43 @@ body{
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.pheading{
+.content button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.content button:hover::before {
+    width: 100%;
+}
+
+.pheading {
     text-align: center;
     margin: 50px 0;
     color: gray;
 }
 
-
-.sec{
+.sec {
     padding: 10px 5%;
 }
 
-.products{
+.products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
-.products .card{
+.products .card {
     width: 310px;
     background: white;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
@@ -135,37 +153,37 @@ body{
     margin-bottom: 20px;
 }
 
-.products .card img{
+.products .card img {
     height: 250px;
     width: 100%;
 }
 
-.products .card .desc{
-    padding: 5px 20 px;
+.products .card .desc {
+    padding: 5px 20px;
     opacity: 0.8;
 }
 
-.products .card .judul{
+.products .card .judul {
     font-weight: 900;
     font-size: 20px;
     color: gray;
     padding: 0 20px;
 }
 
-.products .card .box{
+.products .card .box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
-.products .card .box .harga{
+.products .card .box .harga {
     color: black;
     font-size: 20px;
     font-weight: bold;
 }
 
-.products .card .box .btn{
+.products .card .box .btn {
     font: 13px;
     color: green;
     padding: 10px 18px;
@@ -174,9 +192,8 @@ body{
     border-radius: 20px;
 }
 
-.products .card .box .btn:hover{
+.products .card .box .btn:hover {
     cursor: pointer;
     background-color: green;
     color: white;
 }
-

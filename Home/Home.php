@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar">
         <h1 class="Logo">
-            <a href="/LandingPage/index.html">LokaArt</a>
+            <a href="/EcommercePlat/LandingPage/">LokaArt</a>
           </h1>
         <ul class="menu">
             <li><a href="" class="active"></a></li>
@@ -30,7 +30,7 @@
             <div class="text">
                 <h1>New Arrivals Art</h1>
                 <p>Dapatkan Produk Kesenian Terbaru Dari Para Seniman Indonesia</p>
-                <button>Beli Sekarang</button>
+                <button class="btn">Beli Sekarang</button>
             </div>
             <div class="image-container">
                 <img src="gambar/shopping.png" alt="Shopping Image">
@@ -49,7 +49,7 @@
                 <div class="desc">Vas emas model emas yang dibuat dengan bahan kaca</div>
                 <div class="box">
                     <div class="harga">Rp.150.000</div>
-                    <button class="btn">Beli</button>
+                    <button class="btn" onclick="redirectToProductDetail('1')">Beli</button>
                 </div>
             </div>
 
@@ -60,7 +60,7 @@
                 <div class="desc">Vas kaca merah dengan motif bunga-bunga </div>
                 <div class="box">
                     <div class="harga">Rp.125.000</div>
-                    <button class="btn">Beli</button>
+                    <button class="btn" onclick="redirectToProductDetail('2')">Beli</button>
                 </div>
             </div>
             
@@ -71,7 +71,7 @@
                 <div class="desc">Vas dengan bahan tanah liat dibuat oleh tangan asli seniman Indonesia</div>
                 <div class="box">
                     <div class="harga">Rp.100.000</div>
-                    <button class="btn">Beli</button>
+                    <button class="btn" onclick="redirectToProductDetail('3')">Beli</button>
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
                 <div class="desc">Salah satu gelas berbahan bambu tradisional</div>
                 <div class="box">
                     <div class="harga">Rp.50.000</div>
-                    <button class="btn">Beli</button>
+                    <button class="btn" onclick="redirectToProductDetail('4')">Beli</button>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
                 <div class="desc">Satu set teko teh dengan berbahan dasar tanah liat</div>
                 <div class="box">
                     <div class="harga">Rp.120.000</div>
-                    <button class="btn">Beli</button>
+                    <button class="btn" onclick="redirectToProductDetail('5')">Beli</button>
                 </div>
             </div>
 
@@ -106,7 +106,7 @@
                 <div class="desc">Vas besar dengan motif tanaman</div>
                 <div class="box">
                     <div class="harga">Rp.150.000</div>
-                    <button class="btn">Beli</button>
+                    <button class="btn" onclick="redirectToProductDetail('6')">Beli</button>
                 </div>
             </div>
 
@@ -117,12 +117,21 @@
                 <div class="desc">Vas dengan bahan kaca khusus yang dibuat langsung oleh tangan asli Paul Kusuma sebagai tanda kasih sayang</div>
                 <div class="box">
                     <div class="harga">Rp.1.000.000</div>
-                    <button class="btn">Beli</button>
+                    <button class="btn" onclick="redirectToProductDetail('7')">Beli</button>
                 </div>
             </div>
         </div>
     </section>
     <script src="https://kit.fontawesome.com/cc52547201.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        function redirectToProductDetail(productId) {
+            // Assuming you want to redirect to a PHP file with the product ID as a query parameter
+            window.location.href = 'product.php?id=' + productId;
+        }
+    </script>
+    </script>
 </body>
 </html>

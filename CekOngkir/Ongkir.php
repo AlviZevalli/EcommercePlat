@@ -1,5 +1,4 @@
 <?php
-
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -29,141 +28,149 @@ if ($err) {
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Cek Ongkir LokaArt</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
-    <style>
-      .input-group-append {
-        margin-left: 10px;
-      }
-    </style>
-  </head>
-  <body>
 
-  <div class="jumbotron text-center">
+<head>
+  <title>Cek Ongkir LokaArt</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-mode">
+  <nav class="navbar">
+    <h1 class="Logo">
+      <a href="/LandingPage/index.html">LokaArt</a>
+    </h1>
+
+    <ul class="menu-left">
+      <li><a href="/EcommercePlat/Home/">New Arrivals</a></li>
+      <li><a href="/EcommercePlat/CekOngkir/Ongkir/">Cek Ongkir</a></li>
+      <li><a href="">Account</a></li>
+      <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+    </ul>
+  </nav>
+
+  <div class="jumbotron text-center dark-mode">
     <h1>Cek Biaya Ongkir</h1>
-    <p>Mengecek Ongkos Pengiriman Barang Pembelian</p> 
+    <p>Mengecek Ongkos Pengiriman Barang Pembelian</p>
   </div>
-    
-  <div class="container">
-    <div class="row">
 
+  <div class="container dark-mode">
+    <div class="row">
       <div class="col-sm-4">
         <h3>Asal Barang</h3>
-        <p>Pilih Provinsi
-        <select name="provinsi-asal" onchange="cariKotaAsal(this.value)" class="form-control">
-          <option>Pilih Provinsi</option>
-          <?php
+        <div class="form-group">
+          <label for="provinsi-asal">Pilih Provinsi</label>
+          <select name="provinsi-asal" id="provinsi-asal" onchange="cariKotaAsal(this.value)" class="form-control dark-mode">
+            <option>Pilih Provinsi</option>
+            <?php
             foreach ($data->rajaongkir->results as $provinsi) {
-              echo '<option value="'.$provinsi->province_id.'">'.$provinsi->province.'</option>';
+              echo '<option value="' . $provinsi->province_id . '">' . $provinsi->province . '</option>';
             }
-          ?>
-        </select>
-        </p>
-        <p>Pilih Kota Asal <br>
-        <select id="kota-asal" name="kota-asal" class="form-control">
-          <option>Pilih Kota</option>
-        </select>
-        </p>
+            ?>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="kota-asal">Pilih Kota Asal</label>
+          <select id="kota-asal" name="kota-asal" class="form-control dark-mode">
+            <option>Pilih Kota</option>
+          </select>
+        </div>
       </div>
 
       <div class="col-sm-4">
         <h3>Tujuan Barang</h3>
-        <p>Pilih Provinsi
-        <select name="provinsi-tujuan" onchange="cariKotaTujuan(this.value)" class="form-control">
-          <option>Pilih Provinsi</option>
-          <?php
+        <div class="form-group">
+          <label for="provinsi-tujuan">Pilih Provinsi</label>
+          <select name="provinsi-tujuan" id="provinsi-tujuan" onchange="cariKotaTujuan(this.value)" class="form-control dark-mode">
+            <option>Pilih Provinsi</option>
+            <?php
             foreach ($data->rajaongkir->results as $provinsi) {
-              echo '<option value="'.$provinsi->province_id.'">'.$provinsi->province.'</option>';
+              echo '<option value="' . $provinsi->province_id . '">' . $provinsi->province . '</option>';
             }
-          ?>
-        </select>
-        </p>
-        <p>Pilih Kota Tujuan<br>
-        <select id="kota-tujuan" name="kota-tujuan" class="form-control">
-          <option>Pilih Kota</option>
-        </select>
-        </p>
+            ?>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="kota-tujuan">Pilih Kota Tujuan</label>
+          <select id="kota-tujuan" name="kota-tujuan" class="form-control dark-mode">
+            <option>Pilih Kota</option>
+          </select>
+        </div>
       </div>
 
       <div class="col-sm-4">
         <h3>Berat Dan Kurir</h3>
-        <p>
-          Berat Paket (gram): <br/>
-          <input id="berat_paket" type="text" name="berat_paket">
-        </p>
-        <p>
-          Pilih Kurir: <br/>
-          <select name="kurir" id="kurir" class="form-control">
+        <div class="form-group">
+          <label for="berat-paket">Berat Paket (gram)</label>
+          <input id="berat-paket" type="text" name="berat_paket" class="form-control dark-mode">
+        </div>
+        <div class="form-group">
+          <label for="kurir">Pilih Kurir</label>
+          <select name="kurir" id="kurir" class="form-control dark-mode">
             <option value="jne">JNE</option>
             <option value="tiki">TIKI</option>
             <option value="pos">POS Indonesia</option>
           </select>
-        </p>
+        </div>
       </div>
 
       <div class="col-sm-12">
         <h3>Cek Ongkos</h3>
-        <p>
-         <input type="submit" name="Cari" value="Cek Biaya" onclick="cekOngkir()">
-        </p> 
-        
-        <div id="hasil-cek-ongkir">...</div>
-        
+        <div class="form-group">
+          <input type="submit" name="Cari" value="Cek Biaya" onclick="cekOngkir()" class="btn btn-primary dark-mode">
+        </div>
+        <div id="hasil-cek-ongkir"></div>
       </div>
-
-
     </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
   <script>
-
-    function cariKotaAsal(id_provinsi){
+    function cariKotaAsal(id_provinsi) {
       var xmlhttp = new XMLHttpRequest();
 
-      xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
           document.getElementById("kota-asal").innerHTML = this.responseText;
         }
       };
-      xmlhttp.open("GET", "http://localhost/EcommercePlat/CekOngkir/cariKota.php?id_provinsi="+id_provinsi, true);
+      xmlhttp.open("GET", "http://localhost/EcommercePlat/CekOngkir/cariKota.php?id_provinsi=" + id_provinsi, true);
       xmlhttp.send();
-    } 
+    }
 
-    function cariKotaTujuan(id_provinsi){
+    function cariKotaTujuan(id_provinsi) {
       var xmlhttp = new XMLHttpRequest();
 
-      xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
           document.getElementById("kota-tujuan").innerHTML = this.responseText;
         }
       };
-      xmlhttp.open("GET", "http://localhost/EcommercePlat/CekOngkir/cariKota.php?id_provinsi="+id_provinsi, true);
+      xmlhttp.open("GET", "http://localhost/EcommercePlat/CekOngkir/cariKota.php?id_provinsi=" + id_provinsi, true);
       xmlhttp.send();
-    } 
+    }
 
-    function cekOngkir(){
+    function cekOngkir() {
       var id_kota_asal = document.getElementById("kota-asal").value;
       var id_kota_tujuan = document.getElementById("kota-tujuan").value;
-      var berat_paket = document.getElementById("berat_paket").value;
+      var berat_paket = document.getElementById("berat-paket").value;
       var kurir = document.getElementById("kurir").value;
 
       var xmlhttp = new XMLHttpRequest();
 
-      xmlhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
           document.getElementById("hasil-cek-ongkir").innerHTML = this.responseText;
         }
       };
-      xmlhttp.open("GET", "http://localhost/EcommercePlat/CekOngkir/hargaOngkir.php?id_kota_asal="+id_kota_asal+"&id_kota_tujuan="+id_kota_tujuan+"&berat_paket="+berat_paket+"&kurir="+kurir, true);
+      xmlhttp.open("GET", "http://localhost/EcommercePlat/CekOngkir/hargaOngkir.php?id_kota_asal=" + id_kota_asal + "&id_kota_tujuan=" + id_kota_tujuan + "&berat_paket=" + berat_paket + "&kurir=" + kurir, true);
       xmlhttp.send();
     }
-
   </script>
-  </body>
+  <script src="https://kit.fontawesome.com/cc52547201.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</body>
 </html>
