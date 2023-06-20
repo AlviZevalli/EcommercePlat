@@ -26,7 +26,7 @@
         <h1 class="Logo">
           <a href="/">LokaArt</a>
         </h1>
-        <a href="/EcommercePlat/SignUp/SignUp.php" class="btnSignup">Sign Up</a>
+        <a href="/EcommercePlat/Login/SignIn.php" class="btnSignup">Sign Up</a>
       </nav>
       <div class="headertitle fade">
         <div class="animated-text">
